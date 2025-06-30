@@ -1,0 +1,42 @@
+.new_todo_div {
+    display: flex;
+    width: 400px;
+    height: 45px;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid rgb(153, 110, 110);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+
+.input_box {
+    color: rgb(46, 38, 38);
+    outline: none;
+    
+    flex: 1;
+    outline: none;
+    border: none;
+    height: auto;
+    padding: 5px;
+    font-size: 1.12rem;
+    padding-inline: 15px;
+    
+}
+
+.add_button .add_icon {
+    width: 30px;
+    height: 30px;
+    
+}
+
+.add_button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 15px;
+
+    background-color: white;
+}

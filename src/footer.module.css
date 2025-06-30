@@ -1,0 +1,28 @@
+.footer1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.ad span {
+    color: rgb(0, 0, 0)
+}
+
+.ad {
+     background: linear-gradient(to right, red, purple);
+     width: 40%;
+     height: 30px;
+     align-content: center;
+     color:rgb(43, 39, 39);
+
+}
+
+
+
+.ad a {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(250, 184, 184);
+    font-weight: bold;
+}

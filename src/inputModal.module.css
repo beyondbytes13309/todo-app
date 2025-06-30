@@ -1,0 +1,62 @@
+.input_modal_div {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #3a3a55;
+    background-color: #1e1e2f;
+    color: #f4f4f9;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal_h2 {
+    margin: 15px;
+    margin-top: 0px
+}
+
+.input_box_edit {
+    padding: 5px;
+    outline: none;
+    border: none;
+    margin-inline: auto;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 7px;
+    font-size: 1.025rem
+}
+
+.edit_save {
+    width: 30%;
+    color: #1e1e2f;
+    background-color: #f4f4f9;
+    border: 1px solid #3a3a55;
+    padding: 4px;
+    cursor: pointer;
+    
+    
+}
+
+.cancel_save {
+    width: 30%;
+    color: #1e1e2f;
+    background-color: #f4f4f9;
+    border: 1px solid #3a3a55;
+    padding: 4px;
+    cursor: pointer;
+    
+    
+}
+
+
+.button_haven {
+    margin-inline: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px
+}
