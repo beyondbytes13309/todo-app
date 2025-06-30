@@ -2,15 +2,32 @@ import { FaTrashCan } from 'react-icons/fa6'
 import { MdEdit } from "react-icons/md";
 import styles from './todo.module.css'
 import InputModal from './InputModal';
-import { useState } from 'react';
+import Modal from './Modal'
+import { useEffect, useState } from 'react';
 
 
 
 export default function Todo({ id, title, checked, deleteTodo, checkTodo, editTodo }) {
     const [inputModalVisibility, setInputModalVisibility] = useState(false)
+    const [confirmModalVisibility, setConfirmModalVisibility] = useState(false)
+    const [confrmModalBtnPress, setConfrmModalBtnPress] = useState(-1)
+    const [toBeDeleted, setToBeDeleted] = useState(null)
     const takeEditedTitle = () => {
         setInputModalVisibility(true)
     }
+    const confirmAndDelete = (id) => {
+        setToBeDeleted(id)
+        setConfirmModalVisibility(true)
+    }
+
+    
+
+    useEffect(() => {
+        if (confrmModalBtnPress == 0) {
+            deleteTodo(toBeDeleted)
+        } 
+    }, [confrmModalBtnPress])
+
     return (
         <>
             <div className={styles.todo_div}>
@@ -36,7 +53,7 @@ export default function Todo({ id, title, checked, deleteTodo, checkTodo, editTo
 
                 <button 
                 className={styles.del_button} 
-                onClick={() => deleteTodo(id)}>
+                onClick={() => confirmAndDelete(id)}>
                     <FaTrashCan className={styles.trash_icon}></FaTrashCan>
                 </button>
                 
@@ -48,6 +65,17 @@ export default function Todo({ id, title, checked, deleteTodo, checkTodo, editTo
             editTodo={editTodo}
             todoID={id}
             ></InputModal>}
+
+            {confirmModalVisibility &&
+            <Modal
+            title={"Warning!"}
+            message="Are you sure you want to delete this?"
+            setModalVisibilty={setConfirmModalVisibility}
+            variant="confirmation"
+            setBtnPress={setConfrmModalBtnPress}>
+            </Modal>}
+
+            {}
             
         </>
     )
