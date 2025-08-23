@@ -57,7 +57,7 @@ function App() {
 
   return (
     <>
-    <Header title="Rana ka react-app"></Header>
+    <Header title="Rana's ToDo App"></Header>
       <div className="parent">
         {
             todos.map((todo, index) => (

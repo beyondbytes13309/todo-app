@@ -2,7 +2,7 @@ import styles from './modal.module.css'
 
 export default function Modal({title, message, setModalVisibilty, variant, setBtnPress}) {
     const handleClick = (btn_num) => {
-        setBtnPress(btn_num)
+        setBtnPress?.(btn_num)
         setModalVisibilty(false)
     }  
 
