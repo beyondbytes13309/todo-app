@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import Todo from './Todo.jsx'
-import NewTodo from "./NewTodo.jsx"
-import Header from "./Header.jsx"
-import Footer from './Footer.jsx'
+import Todo from './components/Todo.jsx'
+import NewTodo from "./components/NewTodo.jsx"
+import Header from "./components/Header.jsx"
+import Footer from './components/Footer.jsx'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -26,7 +26,7 @@ function App() {
   const addTodo = (title) => {
     const newID = String(Math.round(Math.random()*10000))
 
-    const updatedTodos = [...todos, {id: newID, title: title, checked: false}]
+    const updatedTodos = [...todos, {id: newID, title: title, checked: false, createdAt: new Date()}]
 
     setTodos(updatedTodos)
   }
@@ -66,6 +66,7 @@ function App() {
                     id={todo.id} 
                     title={todo.title} 
                     checked={todo.checked} 
+                    createdAt={todo.createdAt}
                     deleteTodo={deleteTodo} 
                     checkTodo={checkTodo}
                     editTodo={editTodo}

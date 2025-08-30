@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styles from './inputModal.module.css'
+import styles from './styles/inputModal.module.css'
 
 export default function InputModal({ title, message, setInputModalVisibility, editTodo, todoID }) {
     const [editedInput, setEditedInput] = useState(message)

@@ -1,4 +1,4 @@
-import styles from './modal.module.css'
+import styles from './styles/modal.module.css'
 
 export default function Modal({title, message, setModalVisibilty, variant, setBtnPress}) {
     const handleClick = (btn_num) => {

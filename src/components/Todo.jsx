@@ -1,13 +1,13 @@
 import { FaTrashCan } from 'react-icons/fa6'
 import { MdEdit } from "react-icons/md";
-import styles from './todo.module.css'
+import styles from './styles/todo.module.css'
 import InputModal from './InputModal';
 import Modal from './Modal'
 import { useEffect, useState } from 'react';
 
 
 
-export default function Todo({ id, title, checked, deleteTodo, checkTodo, editTodo }) {
+export default function Todo({ id, title, checked, createdAt, deleteTodo, checkTodo, editTodo }) {
     const [inputModalVisibility, setInputModalVisibility] = useState(false)
     const [confirmModalVisibility, setConfirmModalVisibility] = useState(false)
     const [confrmModalBtnPress, setConfrmModalBtnPress] = useState(-1)
@@ -19,8 +19,6 @@ export default function Todo({ id, title, checked, deleteTodo, checkTodo, editTo
         setToBeDeleted(id)
         setConfirmModalVisibility(true)
     }
-
-    
 
     useEffect(() => {
         if (confrmModalBtnPress == 0) {

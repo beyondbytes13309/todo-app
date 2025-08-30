@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Modal from './Modal.jsx'
-import styles from './newtodo.module.css'
+import styles from './styles/newtodo.module.css'
 import { MdAddCircle } from "react-icons/md";
 
 

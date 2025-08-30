@@ -29,6 +29,11 @@
     
 }
 
+.createdAt {
+    color: gray;
+    font-size: 0.92rem;
+}
+
 .del_button {
     margin-right: 5px;
     background-color: white;
